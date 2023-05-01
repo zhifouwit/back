@@ -1,0 +1,33 @@
+[submodule "app"]
+	path = app
+	url = https://git.154896.xyz/zhifou/app.git
+[submodule "collect"]
+	path = collect
+	url = https://git.154896.xyz/zhifou/collect.git
+[submodule "comment"]
+	path = comment
+	url = https://git.154896.xyz/zhifou/comment.git
+[submodule "dynamic"]
+	path = dynamic
+	url = https://git.154896.xyz/zhifou/dynamic.git
+[submodule "gorse"]
+	path = gorse
+	url = https://git.154896.xyz/zhifou/gorse.git
+[submodule "idgen"]
+	path = idgen
+	url = https://git.154896.xyz/zhifou/idgen.git
+[submodule "like"]
+	path = like
+	url = https://git.154896.xyz/zhifou/like.git
+[submodule "nats"]
+	path = nats
+	url = https://git.154896.xyz/zhifou/nats.git
+[submodule "pkg"]
+	path = pkg
+	url = https://git.154896.xyz/zhifou/pkg.git
+[submodule "tag"]
+	path = tag
+	url = https://git.154896.xyz/zhifou/tag.git
+[submodule "user"]
+	path = user
+	url = https://git.154896.xyz/zhifou/user.git

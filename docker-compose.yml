@@ -1,0 +1,24 @@
+version: '3'
+
+networks:
+  zhifou:
+
+services:
+  app-api:
+    image: registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-app-api
+    ports:
+      - "8000:8000"
+    links:
+      - user-rpc
+      - dynamic-rpc
+      - tag-rpc
+    environment:
+      USER_HOST: user-rpc:8080
+      DYNAMIC_HOST: dynamic-rpc:8080
+      TAG_HOST: tag-rpc:8080
+  user-rpc:
+    image: registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-user-rpc
+  dynamic-rpc:
+    image: registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-dynamic-rpc
+  tag-rpc:
+    image: registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-tag-rpc
