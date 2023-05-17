@@ -29,7 +29,7 @@ jobs:
           context: ./app
           push: true
           tags: registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-app-api:latest,registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-app-api:${{ env.RELEASE_VERSION }}
-          file: Dockerfile-k8s
+          file: ./app/Dockerfile-k8s
 
   build-user-rpc:
     runs-on: ubuntu-latest
@@ -52,7 +52,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: ./user
-          file: Dockerfile-k8s
+          file: ./user/Dockerfile-k8s
           push: true
           tags: registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-user-rpc:latest,registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-user-rpc:${{ env.RELEASE_VERSION }}
 
@@ -77,7 +77,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: ./dynamic
-          file: Dockerfile-k8s
+          file: ./dynamic/Dockerfile-k8s
           push: true
           tags: registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-dynamic-rpc:latest,registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-dynamic-rpc:${{ env.RELEASE_VERSION }}
 
@@ -102,7 +102,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: ./tag
-          file: Dockerfile-k8s
+          file: ./tag/Dockerfile-k8s
           push: true
           tags: registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-tag-rpc:latest,registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-tag-rpc:${{ env.RELEASE_VERSION }}
 
@@ -127,7 +127,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: ./like
-          file: Dockerfile-k8s
+          file: ./like/Dockerfile-k8s
           push: true
           tags: registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-like-rpc:latest,registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-like-rpc:${{ env.RELEASE_VERSION }}
 
@@ -152,7 +152,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: ./collect
-          file: Dockerfile-k8s
+          file: ./collect/Dockerfile-k8s
           push: true
           tags: registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-collect-rpc:latest,registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-collect-rpc:${{ env.RELEASE_VERSION }}
 
@@ -177,7 +177,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: ./comment
-          file: Dockerfile-k8s
+          file: ./comment/Dockerfile-k8s
           push: true
           tags: registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-comment-rpc:latest,registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-comment-rpc:${{ env.RELEASE_VERSION }}
 
@@ -202,7 +202,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: ./idgen
-          file: Dockerfile-k8s
+          file: ./idgen/Dockerfile-k8s
           push: true
           tags: registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-idgen-rpc:latest,registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-idgen-rpc:${{ env.RELEASE_VERSION }}
 
@@ -227,7 +227,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: ./gorse
-          file: Dockerfile-k8s
+          file: ./gorse/Dockerfile-k8s
           push: true
           tags: registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-gorse-rpc:latest,registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-gorse-rpc:${{ env.RELEASE_VERSION }}
 
@@ -252,6 +252,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: ./nats
-          file: Dockerfile-k8s
+          file: ./nats/Dockerfile-k8s
           push: true
           tags: registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-nats-rpc:latest,registry.cn-hangzhou.aliyuncs.com/scmtble/zhifou-nats-rpc:${{ env.RELEASE_VERSION }}
