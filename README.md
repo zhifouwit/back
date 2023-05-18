@@ -19,4 +19,4 @@
 
 ## 项目架构
 
-![img.png](img.png)
+![img.png](zhifou.png)
